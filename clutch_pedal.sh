@@ -17,10 +17,10 @@ osnumberer (){
 if [ $installcheck -eq 0 ]
 then
 	osnumberer
-	if [ $osnumber==1 ]
+	if [ $osnumber -eq 1 ]
 	then
 		macinstall
-	elif [ $osnumber==2 ]
+	elif [ $osnumber -eq 2 ]
 	then
 		open https://handbrake.fr/downloads2.php
 		echo Even if you have already downloaded HandBrake before, download from this link according to your OS.
@@ -32,7 +32,8 @@ then
 		echo
 		echo If no error messages, SUCCESS! HandBrakeCLI is installed!
 	fi
-elif [ $installcheck -eq 1 ]; then
+elif [ $installcheck -eq 1 ]
+then
 	echo
 	echo
 	echo
