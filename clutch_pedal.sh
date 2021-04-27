@@ -11,6 +11,8 @@ open https://handbrake.fr/rotation.php?file=HandBrakeCLI-1.3.3.dmg
 	echo
 	echo
 	echo If no error messages, SUCCESS! HandBrakeCLI is installed!
+	echo Please run this program again by typing ./clutch_pedal into the terminal again, and entering 1 instead of 0.
+
 }
 osnumberer (){
 	echo Enter 1 for Mac, 2 for other.
@@ -39,6 +41,7 @@ then
 		echo Move HandBrakeCLI to Clutch_Pedal folder in Desktop
 		echo
 		echo If no error messages, SUCCESS! HandBrakeCLI is installed!
+		echo Please run this program again by typing ./clutch_pedal into the terminal again, and entering 1 instead of 0.
 	fi
 elif [ $installcheck -eq 1 ]
 then
