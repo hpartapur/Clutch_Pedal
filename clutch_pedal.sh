@@ -5,6 +5,7 @@ echo If this is your first time working with clutch_pedal, please enter 0. Other
 read installcheck
 macinstall () {
 open https://handbrake.fr/rotation.php?file=HandBrakeCLI-1.3.3.dmg
+	cd ~/Downloads
 	sudo hdiutil attach HandBrakeCLI-1.3.3.dmg
 	cp -r "/Volumes/HandBrakeCLI-1.3.3/HandBrakeCLI" ~/Desktop/Clutch_Pedal
 	echo
