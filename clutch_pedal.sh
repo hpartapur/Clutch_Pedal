@@ -36,7 +36,6 @@ then
 		echo Then Unzip the file.
 		echo Once this is done, press any key to continue.
 		read anykey
-		sudo chmod +x ./HandBrakeCLI
 		echo Move HandBrakeCLI to Clutch_Pedal folder in Desktop
 		echo
 		echo If no error messages, SUCCESS! HandBrakeCLI is installed!
