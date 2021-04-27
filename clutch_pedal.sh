@@ -13,7 +13,13 @@ osnumberer (){
 	echo Enter 1 for Mac, 2 for other.
 	read osnumber
 }
-
+success_message(){
+	echo HandBraked Video has been exported to Desktop.
+	echo Encoding- x264
+	echo CRF-Quality: 25.0
+	echo Frame Rate: 22.0
+	echo 1080p
+}
 if [ $installcheck -eq 0 ]
 then
 	osnumberer
@@ -46,6 +52,12 @@ then
 	outputter="$raatnumber"mi_raat_web.mp4
 
 	./HandBrakeCLI -i $inputpath -o ~/Desktop/"$outputter" -e x264 -q 22.0 -r 25 -w 1920 -l 1080
+	if [ $? -gt 0 ]
+	then
+		echo Something went wrong HandBraking your video
+	elif [  $? -eq 0 ]
+	then success_message
+	fi
 else
 	echo Something went wrong
 fi
@@ -54,9 +66,3 @@ fi
 
 
 
-
-echo HandBraked Video has been exported.
-echo Encoding- x264
-echo CRF-Quality: 25.0
-echo Frame Rate: 22.0
-echo 1080p
