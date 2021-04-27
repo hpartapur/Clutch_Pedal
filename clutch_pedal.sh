@@ -59,7 +59,9 @@ then
 	then
 		echo Something went wrong HandBraking your video
 	elif [  $? -eq 0 ]
-	then success_message
+	then 
+		success_message
+		
 	fi
 else
 	echo Something went wrong
