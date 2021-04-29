@@ -15,7 +15,7 @@ open https://handbrake.fr/rotation.php?file=HandBrakeCLI-1.3.3.dmg
 
 }
 osnumberer (){
-	echo Enter 1 for Mac, 2 for other.
+	echo Enter 1 for Windows, 2 for Mac.
 	read osnumber
 }
 success_message(){
@@ -28,18 +28,13 @@ success_message(){
 if [ $installcheck -eq 0 ]
 then
 	osnumberer
-	if [ $osnumber -eq 1 ]
+	if [ $osnumber -eq 2 ]
 	then
 		macinstall
-	elif [ $osnumber -eq 2 ]
+	elif [ $osnumber -eq 1 ]
 	then
-		open https://handbrake.fr/downloads2.php
-		echo Even if you have already downloaded HandBrake before, download from this link according to your OS.
-		echo Then Unzip the file.
-		echo Once this is done, press any key to continue.
-		read anykey
-		echo Move HandBrakeCLI to Clutch_Pedal folder in Desktop
-		echo
+		open https://handbrake.fr/rotation.php?file=HandBrakeCLI-1.3.3-win-x86_64.zip
+		cd ~/Downloads/HandBrakeCLI
 		echo If no error messages, SUCCESS! HandBrakeCLI is installed!
 		echo Please run this program again by typing ./clutch_pedal into the terminal again, and entering 1 instead of 0.
 	fi
