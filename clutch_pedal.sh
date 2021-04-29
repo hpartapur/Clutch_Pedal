@@ -34,7 +34,8 @@ then
 	elif [ $osnumber -eq 1 ]
 	then
 		open https://handbrake.fr/rotation.php?file=HandBrakeCLI-1.3.3-win-x86_64.zip
-		cd ~/Downloads/HandBrakeCLI
+		cd ~/Downloads
+		Expand-Archive -LiteralPath '~\Downloads\HandBrakeCLI-1.3.3-win-x86_64.zip' -DestinationPath '~\Downloads'
 		echo If no error messages, SUCCESS! HandBrakeCLI is installed!
 		echo Please run this program again by typing ./clutch_pedal into the terminal again, and entering 1 instead of 0.
 	fi
