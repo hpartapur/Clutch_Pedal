@@ -36,9 +36,17 @@ then
 	then
 		start https://handbrake.fr/rotation.php?file=HandBrakeCLI-1.3.3-win-x86_64.zip
 		cd ~/Downloads
-		Expand-Archive -LiteralPath '~\Downloads\HandBrakeCLI-1.3.3-win-x86_64.zip' -DestinationPath '~\Downloads'
-		cd HandBrakeCLI-1.3.3-win-x86_64
-		./HandBrake 
+		Expand-Archive -LiteralPath '~\Downloads\HandBrakeCLI-1.3.3-win-x86_64.zip' -DestinationPath '~\Desktop\Clutch_Pedal'
+		cd ~\Desktop\Clutch_Pedal
+		echo Make sure your Exported File from Premiere Pro is in the Clutch_Pedal folder on the Desktop. If not, copy it to the Clutch_Pedal folder now.
+		echo Enter Name of your Exported File from Premiere Pro \(Example: myvideo.mp4, or mymajlisvideo.mp4\)
+		read inputpath
+		echo
+		echo
+		echo Enter number of raat majlis \(Example: 14\)
+		read raatnumber
+		outputter="$raatnumber"mi_raat_web.mp4
+		./HandBrake -i '~\Desktop\Clutch_Pedal\"$inputpath"' -o '~/Desktop/Clutch_Pedal/"$outputter"' -e x264 -q 27.0 -r 25 -w 1920 -l 1080
 		echo If no error messages, SUCCESS! HandBrakeCLI is installed!
 		echo Please run this program again by typing ./clutch_pedal into the terminal again, and entering 1 instead of 0.
 	fi
