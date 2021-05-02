@@ -37,7 +37,7 @@ then
 		start https://handbrake.fr/rotation.php?file=HandBrakeCLI-1.3.3-win-x86_64.zip
 		cd ~/Downloads
 		Expand-Archive -LiteralPath '~\Downloads\HandBrakeCLI-1.3.3-win-x86_64.zip' -DestinationPath '~\Desktop\Clutch_Pedal'
-		cd ~\Desktop\Clutch_Pedal
+		cd ~/Desktop/Clutch_Pedal
 		echo Make sure your Exported File from Premiere Pro is in the Clutch_Pedal folder on the Desktop. If not, copy it to the Clutch_Pedal folder now.
 		echo Enter Name of your Exported File from Premiere Pro \(Example: myvideo.mp4, or mymajlisvideo.mp4\)
 		read inputpath
