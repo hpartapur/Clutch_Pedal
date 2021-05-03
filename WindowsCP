@@ -1,0 +1,6 @@
+echo Enter file name with extension of your exported file.
+echo Make sure this file is in your ClutchPedal folder, and that there are no spaces in the file name.
+read $filename
+echo Enter number of raat majlis \(Example: 14\)
+read $raatnumber
+$outputter="$raatnumber"mi_raat_web.mp4
