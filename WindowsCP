@@ -1,6 +1,7 @@
 echo "Enter file name with extension of your exported file."
 echo "Make sure this file is in your ClutchPedal folder, and that there are no spaces in the file name."
-$filename = Read-Host "Enter File Name here. "
+$inputpath = Read-Host "Enter File Name here. "
 echo "Enter number of raat majlis. Example: 14"
 $raatnumber = Read-Host "Enter number of raat majlis Example: 14"
 $outputter="$raatnumber\mi_raat_web.mp4"
+./HandBrake -i '~\Desktop\Clutch_Pedal\"$inputpath"' -o '~/Desktop/Clutch_Pedal/"$outputter"' -e x264 -q 27.0 -r 25 -w 1920 -l 1080
