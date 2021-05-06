@@ -1,4 +1,3 @@
-#!/bin/bash
 cd ~/Desktop/Clutch_Pedal
 echo "Enter file name with extension of your exported file."
 echo "Make sure this file is in your ClutchPedal folder, and that there are no spaces in the file name."
