@@ -1,6 +1,6 @@
+(#!/bin/bash )
 echo "Enter file name with extension of your exported file."
 echo "Make sure this file is in your ClutchPedal folder, and that there are no spaces in the file name."
 $inputpath = Read-Host "Enter File Name here. "
-$raatnumber = Read-Host "Enter number of raat majlis Example: 14"
-$outputter="$raatnumber\mi_raat_web.mp4"
-./HandBrake.exe -i '~\Desktop\Clutch_Pedal\"$inputpath"' -o '~/Desktop/Clutch_Pedal/"$outputter"' -e x264 -q 27.0 -r 25 -w 1920 -l 1080
+$outputname = Read-Host "Create a name for your HandBraked Compressed Video with extension. Example: myvideocompressed.mp4"
+./HandBrakeCLI.exe -i "$inputpath" -o "$outputname" -e x264 -q 27.0 -r 25 -w 1920 -l 1080
